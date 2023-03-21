@@ -6,15 +6,6 @@ This provider can be used to configure resources from the [ixCloud Portal](https
 using the provided api. It is intended for private customer of our company. Therefore the provider is of no use if you
 aren't a customer of Inventx AG.
 
-## Limitations
-
-At the moment the provider cannot be installed automatically over the terraform registry.
-Therefore you need to download the version manually and install it with the install scripts.
-These will copy the binary to the correct location.
-
-If you miss something please have a look first if there is a newer version. If you still miss
-it, feel free to contact Inventx AG to discuss an additional implementation.
-
 ## Example Templates
 
 For a start it is easiest to make an order in the ix.Cloud Portal and there use the *Show Code* functionality.
