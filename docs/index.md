@@ -1,5 +1,7 @@
 # IXCLOUD Provider
 
+~> This provider is currently in a beta stadium. If you use it and find something that is not working feel free to contact us.
+
 This provider can be used to configure resources from the [ixCloud Portal](https://portal.ixcloud.ch)
 using the provided api. It is intended for private customer of our company. Therefore the provider is of no use if you
 aren't a customer of Inventx AG.
@@ -43,8 +45,7 @@ This example shows you how an application deployment can look like. It deploys a
 terraform {
   required_providers {
     ixcloud = {
-      source  = "inventx.ch/inventx/ixcloud"
-      version = "~> 0.0.1"
+      source = "inventxag/ixcloud"
     }
   }
 }
@@ -56,7 +57,7 @@ locals {
 }
 
 provider "ixcloud" {
-  subscription = "	a852907a-05f4-458a-b98d-34c4837a663c"
+  subscription = "a852907a-05f4-458a-b98d-34c4837a663c"
 }
 
 resource "ixcloud_resourcegroup" "rg" {

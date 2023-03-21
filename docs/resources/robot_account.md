@@ -10,6 +10,9 @@ description: |-
 
 This resource is used to create a robot account inside an existing container registry.
 
+!> With the usage of this resource, the secret of your robot account will be saved in the state file.
+Therefore be cautions where you save and with whom you share the state file.
+
 ## Example Usage
 
 ```terraform
@@ -36,5 +39,3 @@ resource "ixcloud_robot_account" "deployment" {
 
 - `login_name` (String)
 - `secret` (String, Sensitive)
-
-
