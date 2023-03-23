@@ -13,7 +13,7 @@ This resource represents a managed postgresql instance.
 ## Example Usage
 
 ```terraform
-resource "ixcloud_managedinstance_mysql" "mydb1" {
+resource "ixcloud_managedinstance_postgresql" "mydb1" {
   name                = "db1234"
   instance_type       = "PostgreSQL4CE"
   network             = "network1234"

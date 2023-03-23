@@ -14,9 +14,9 @@ Resource for creating and attaching virtual dvd drives to virtual machines
 
 ```terraform
 resource "ixcloud_dvd_drive" "dvd" {
-  virtualmachine_id = "ABCTL1234"
-  lun               = 1
-  iso_image         = "MyIsoImage.iso"
+  virtualmachine_name = "ABCTL1234"
+  lun                 = 1
+  iso_image           = "MyIsoImage.iso"
 }
 ```
 
