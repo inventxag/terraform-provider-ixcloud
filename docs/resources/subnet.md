@@ -35,13 +35,13 @@ resource "ixcloud_subnet" "mysubnet" {
 
 ### Required
 
-- `cidr` (Number)
 - `name` (String)
 - `owner` (String)
 - `vrf` (String)
 
 ### Optional
 
+- `cidr` (Number)
 - `cost_center` (String)
 - `organizational_unit` (String)
 - `resource_group` (String)
