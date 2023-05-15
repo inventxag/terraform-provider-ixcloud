@@ -75,6 +75,7 @@ resource "ixcloud_virtualmachine" "vm" {
 - `availability_set` (String)
 - `backup_days` (Number)
 - `cost_center` (String)
+- `disable_console` (Boolean) The console connection can be disabled on a vm. However, if it is once disabled it cannot be automatically enabled anymore. If you want to enable it again please contact us or redeploy your vm!
 - `hardware` (String)
 - `organizational_unit` (String)
 - `release_level` (String)
