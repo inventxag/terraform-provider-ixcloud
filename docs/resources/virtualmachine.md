@@ -41,6 +41,7 @@ resource "ixcloud_virtualmachine" "vm" {
     software_deployment = true
     metrics = {
         config = ""
+        data_source = ""
     }
     security_classification = {
         client_identifying = true
@@ -113,6 +114,10 @@ Optional:
 
 <a id="nestedatt--addons--metrics"></a>
 ### Nested Schema for `addons.metrics`
+
+Required:
+
+- `data_source` (String)
 
 Optional:
 
