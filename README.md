@@ -1,4 +1,4 @@
-# IXCLOUD Terraform Provider
+# IXCLOUD Terraform Provider <sup>v0.6.0</sup>
 
 This provider can be used to configure resources from the [ixCloud Portal](https://portal.ixcloud.ch)
 using the provided api. It is intended for private customer of our company. Therefore the provider is of no use if you
