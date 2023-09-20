@@ -35,6 +35,7 @@ resource "ixcloud_container_registry" "test" {
 
 - `allow_public_access` (Boolean) When a project is set to public, anyone has read permission to the repositories under this project.
 - `cost_center` (String)
+- `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `organizational_unit` (String)
 - `pull_restriction_level` (String)
 - `pull_restrictions` (Boolean) Prevent vulnerable images from running. Can create a production issue.
@@ -44,5 +45,13 @@ resource "ixcloud_container_registry" "test" {
 ### Read-Only
 
 - `vulnerability_scanning` (Boolean) At the moment is not allowed to disable vulnerability scanning a project. If you need to disable it please contact us.
+
+<a id="nestedatt--custom_properties"></a>
+### Nested Schema for `custom_properties`
+
+Optional:
+
+- `key` (String)
+- `value` (String)
 
 

@@ -51,6 +51,7 @@ resource "ixcloud_managedinstance_mssql" "mydb1" {
 
 - `backup_days` (Number)
 - `cost_center` (String)
+- `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `hardware` (String)
 - `instance_name` (String) Name of the Instance
 - `organizational_unit` (String)
@@ -59,5 +60,13 @@ resource "ixcloud_managedinstance_mssql" "mydb1" {
 - `sql_collation` (String) Collation used for the Database
 - `storage_class` (String) The storage class to be used for this resource. This limits the IOPS of the storage.
 - `tags` (List of String)
+
+<a id="nestedatt--custom_properties"></a>
+### Nested Schema for `custom_properties`
+
+Optional:
+
+- `key` (String)
+- `value` (String)
 
 

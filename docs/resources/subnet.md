@@ -43,6 +43,15 @@ resource "ixcloud_subnet" "mysubnet" {
 
 - `cidr` (Number)
 - `cost_center` (String)
+- `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `organizational_unit` (String)
 - `resource_group` (String)
 - `tags` (List of String)
+
+<a id="nestedatt--custom_properties"></a>
+### Nested Schema for `custom_properties`
+
+Optional:
+
+- `key` (String)
+- `value` (String)

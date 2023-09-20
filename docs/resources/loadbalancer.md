@@ -53,6 +53,7 @@ resource "ixcloud_loadbalancer" "lb" {
 
 - `backend_servers` (Attributes List) (see [below for nested schema](#nestedatt--backend_servers))
 - `cost_center` (String)
+- `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `health_monitor` (String)
 - `internal` (Boolean)
 - `layer` (String) Can be one of the following values: Layer4
@@ -73,5 +74,14 @@ Required:
 Optional:
 
 - `resolved_ip` (String) If the address cannot be resolved by our dns server you can define here the ip address manually
+
+
+<a id="nestedatt--custom_properties"></a>
+### Nested Schema for `custom_properties`
+
+Optional:
+
+- `key` (String)
+- `value` (String)
 
 

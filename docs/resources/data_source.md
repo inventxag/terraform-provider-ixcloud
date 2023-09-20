@@ -30,9 +30,18 @@ resource "ixcloud_data_source" "test" {
 ### Optional
 
 - `cost_center` (String)
+- `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `organizational_unit` (String)
 - `resource_group` (String)
 - `shared_subscription` (List of String)
 - `tags` (List of String)
+
+<a id="nestedatt--custom_properties"></a>
+### Nested Schema for `custom_properties`
+
+Optional:
+
+- `key` (String)
+- `value` (String)
 
 

@@ -49,11 +49,20 @@ resource "ixcloud_managedinstance_mongodb" "mydb1" {
 
 - `backup_days` (Number)
 - `cost_center` (String)
+- `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `hardware` (String)
 - `organizational_unit` (String)
 - `release_level` (String)
 - `resource_group` (String)
 - `storage_class` (String) The storage class to be used for this resource. This limits the IOPS of the storage.
 - `tags` (List of String)
+
+<a id="nestedatt--custom_properties"></a>
+### Nested Schema for `custom_properties`
+
+Optional:
+
+- `key` (String)
+- `value` (String)
 
 

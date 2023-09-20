@@ -76,6 +76,7 @@ resource "ixcloud_virtualmachine" "vm" {
 - `availability_set` (String)
 - `backup_days` (Number)
 - `cost_center` (String)
+- `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `disable_console` (Boolean) The console connection can be disabled on a vm. However, if it is once disabled it cannot be automatically enabled anymore. If you want to enable it again please contact us or redeploy your vm!
 - `hardware` (String)
 - `organizational_unit` (String)
@@ -131,3 +132,13 @@ Optional:
 
 - `client_identifying` (Boolean)
 - `protection_class` (String)
+
+
+
+<a id="nestedatt--custom_properties"></a>
+### Nested Schema for `custom_properties`
+
+Optional:
+
+- `key` (String)
+- `value` (String)
