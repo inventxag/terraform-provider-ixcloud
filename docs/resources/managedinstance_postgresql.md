@@ -51,6 +51,7 @@ resource "ixcloud_managedinstance_postgresql" "mydb1" {
 - `cost_center` (String)
 - `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `hardware` (String)
+- `no_backup_justification` (String) Justification for not having backups
 - `organizational_unit` (String)
 - `release_level` (String)
 - `resource_group` (String)

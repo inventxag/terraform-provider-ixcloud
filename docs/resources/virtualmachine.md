@@ -79,6 +79,7 @@ resource "ixcloud_virtualmachine" "vm" {
 - `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `disable_console` (Boolean) The console connection can be disabled on a vm. However, if it is once disabled it cannot be automatically enabled anymore. If you want to enable it again please contact us or redeploy your vm!
 - `hardware` (String)
+- `no_backup_justification` (String) Justification for not having backups
 - `organizational_unit` (String)
 - `release_level` (String)
 - `resource_group` (String)

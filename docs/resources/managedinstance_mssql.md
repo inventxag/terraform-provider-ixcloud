@@ -54,6 +54,7 @@ resource "ixcloud_managedinstance_mssql" "mydb1" {
 - `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `hardware` (String)
 - `instance_name` (String) Name of the Instance
+- `no_backup_justification` (String) Justification for not having backups
 - `organizational_unit` (String)
 - `release_level` (String)
 - `resource_group` (String)
