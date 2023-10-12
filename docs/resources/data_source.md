@@ -34,7 +34,7 @@ resource "ixcloud_data_source" "test" {
 - `organizational_unit` (String)
 - `resource_group` (String)
 - `shared_subscription` (List of String)
-- `tags` (List of String)
+- `tags` (Set of String)
 
 <a id="nestedatt--custom_properties"></a>
 ### Nested Schema for `custom_properties`

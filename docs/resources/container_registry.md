@@ -40,7 +40,7 @@ resource "ixcloud_container_registry" "test" {
 - `pull_restriction_level` (String)
 - `pull_restrictions` (Boolean) Prevent vulnerable images from running. Can create a production issue.
 - `resource_group` (String)
-- `tags` (List of String)
+- `tags` (Set of String)
 
 ### Read-Only
 

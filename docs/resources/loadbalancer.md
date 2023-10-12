@@ -51,7 +51,7 @@ resource "ixcloud_loadbalancer" "lb" {
 
 ### Optional
 
-- `backend_servers` (Attributes List) (see [below for nested schema](#nestedatt--backend_servers))
+- `backend_servers` (Attributes Set) (see [below for nested schema](#nestedatt--backend_servers))
 - `cost_center` (String)
 - `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `health_monitor` (String)
@@ -61,7 +61,7 @@ resource "ixcloud_loadbalancer" "lb" {
 - `organizational_unit` (String)
 - `persistence_mode` (String) Can be one of the following values: None, ClientIp
 - `resource_group` (String)
-- `tags` (List of String)
+- `tags` (Set of String)
 
 <a id="nestedatt--backend_servers"></a>
 ### Nested Schema for `backend_servers`

@@ -56,7 +56,7 @@ resource "ixcloud_managedinstance_mysql" "mydb1" {
 - `release_level` (String)
 - `resource_group` (String)
 - `storage_class` (String) The storage class to be used for this resource. This limits the IOPS of the storage.
-- `tags` (List of String)
+- `tags` (Set of String)
 
 <a id="nestedatt--custom_properties"></a>
 ### Nested Schema for `custom_properties`

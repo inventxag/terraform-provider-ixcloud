@@ -84,7 +84,7 @@ resource "ixcloud_virtualmachine" "vm" {
 - `release_level` (String)
 - `resource_group` (String)
 - `storage_class` (String) The storage class to be used for this resource. This limits the IOPS of the storage.
-- `tags` (List of String)
+- `tags` (Set of String)
 
 <a id="nestedatt--addons"></a>
 ### Nested Schema for `addons`

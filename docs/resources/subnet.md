@@ -46,7 +46,7 @@ resource "ixcloud_subnet" "mysubnet" {
 - `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `organizational_unit` (String)
 - `resource_group` (String)
-- `tags` (List of String)
+- `tags` (Set of String)
 
 <a id="nestedatt--custom_properties"></a>
 ### Nested Schema for `custom_properties`
