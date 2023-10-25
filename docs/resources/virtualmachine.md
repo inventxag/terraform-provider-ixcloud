@@ -62,7 +62,6 @@ resource "ixcloud_virtualmachine" "vm" {
 
 ### Required
 
-- `admin_pw` (String, Sensitive)
 - `location` (String) Which data center to use
 - `name` (String) Unique (ixcloud wide) Name of the VirtualMachine
 - `network` (String)
@@ -73,6 +72,7 @@ resource "ixcloud_virtualmachine" "vm" {
 ### Optional
 
 - `addons` (Attributes) (see [below for nested schema](#nestedatt--addons))
+- `admin_pw` (String, Sensitive)
 - `availability_set` (String)
 - `backup_days` (Number)
 - `cost_center` (String)
