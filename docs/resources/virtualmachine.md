@@ -20,38 +20,40 @@ Keep in mind, that depending on what property you update it can result in a rebo
 
 ```terraform
 resource "ixcloud_virtualmachine" "vm" {
-  name                = "ABCTL1234"
-  sla                 = "Silver"
-  hardware            = "P2-4"
-  backup_days         = 0
-  release_level       = "stable"
-  organizational_unit = "ABC IX Management"
-  cost_center         = "IX Management"
-  os                  = "L-AlmaLinux-8-Core"
-  location            = "DCEN"
-  storage_class       = "Standard"
-  network             = "subnet1234"
-  admin_pw            = "supersecurepw1234!"
-  owner               = "hans.mueller@inventx.ch"
-  tags                = ["Test"]
-  addons = {
-    cis_hardening = true
-    edr = true
-    qualys = true
+  name                    = "ABCTL1234"
+  sla                     = "Silver"
+  hardware                = "P2-4"
+  backup_days             = 0
+  release_level           = "stable"
+  organizational_unit     = "ABC IX Management"
+  cost_center             = "IX Management"
+  os                      = "L-AlmaLinux-8-Core"
+  location                = "DCEN"
+  storage_class           = "Standard"
+  network                 = "subnet1234"
+  admin_pw                = "supersecurepw1234!"
+  owner                   = "hans.mueller@inventx.ch"
+  tags                    = ["Test"]
+  no_backup_justification = "Only cowards need a backup ;-)"
+  addons                  = {
+    cis_hardening       = true
+    edr                 = true
+    qualys              = true
     software_deployment = true
-    metrics = {
-        config = ""
-        data_source = ""
+    metrics             = {
+      config      = ""
+      data_source = ""
     }
     security_classification = {
-        client_identifying = true
-        protection_class = ""
+      client_identifying = true
+      protection_class   = ""
     }
-    pam = true
+    pam        = true
     managed_os = {
-        patch_day = 1
-        patch_wave = "Wave 1"
-        config = ""
+      patch_day                        = -1
+      patch_wave                       = "Wave 1"
+      no_automatic_patch_justification = "no patching needed"
+      config                           = ""
     }
   }
 }
@@ -112,6 +114,7 @@ Required:
 Optional:
 
 - `config` (String)
+- `no_automatic_patch_justification` (String) Justification for not having automatic patching
 
 
 <a id="nestedatt--addons--metrics"></a>
