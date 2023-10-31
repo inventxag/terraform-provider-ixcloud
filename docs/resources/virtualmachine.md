@@ -37,7 +37,18 @@ resource "ixcloud_virtualmachine" "vm" {
   no_backup_justification = "Only cowards need a backup ;-)"
   addons                  = {
     cis_hardening       = true
-    edr                 = true
+    edr = {
+      exclusions = [
+        {
+          exclusion      = "example exclusion"
+          exclusion_type = "File"
+        },
+        {
+          exclusion      = "another exclusion"
+          exclusion_type = "Folder"
+        }
+      ]
+    }
     qualys              = true
     software_deployment = true
     metrics             = {
@@ -94,7 +105,7 @@ resource "ixcloud_virtualmachine" "vm" {
 Optional:
 
 - `cis_hardening` (Boolean)
-- `edr` (Boolean)
+- `edr` (Attributes) (see [below for nested schema](#nestedatt--addons--edr))
 - `managed_os` (Attributes) (see [below for nested schema](#nestedatt--addons--managed_os))
 - `metrics` (Attributes) (see [below for nested schema](#nestedatt--addons--metrics))
 - `pam` (Boolean)
@@ -102,6 +113,23 @@ Optional:
 - `security_classification` (Attributes) (see [below for nested schema](#nestedatt--addons--security_classification))
 - `software_deployment` (Boolean)
 - `software_inventory` (Boolean)
+
+<a id="nestedatt--addons--edr"></a>
+### Nested Schema for `addons.edr`
+
+Required:
+
+- `exclusions` (Attributes List) (see [below for nested schema](#nestedatt--addons--edr--exclusions))
+
+<a id="nestedatt--addons--edr--exclusions"></a>
+### Nested Schema for `addons.edr.exclusions`
+
+Required:
+
+- `exclusion` (String) The value of the exclusion.
+- `exclusion_type` (String) The type of the exclusion.
+
+
 
 <a id="nestedatt--addons--managed_os"></a>
 ### Nested Schema for `addons.managed_os`
