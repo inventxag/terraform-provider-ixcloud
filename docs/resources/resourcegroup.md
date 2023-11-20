@@ -27,8 +27,20 @@ resource "ixcloud_resourcegroup" "rg" {
 - `name` (String)
 - `owner` (String)
 
+### Optional
+
+- `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
+
 ### Read-Only
 
 - `id` (String) The ID of this resource.
+
+<a id="nestedatt--custom_properties"></a>
+### Nested Schema for `custom_properties`
+
+Optional:
+
+- `key` (String)
+- `value` (String)
 
 
