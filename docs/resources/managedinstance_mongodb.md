@@ -20,6 +20,7 @@ resource "ixcloud_managedinstance_mongodb" "mydb1" {
   sla                 = "Silver"
   user                = "username1234"
   pw                  = "securePassword1!"
+  database_name       = "mymongodbdatabase"
   location            = "DCSG"
   patch_wave          = "Wave 1"
   patch_day           = 1
@@ -34,6 +35,7 @@ resource "ixcloud_managedinstance_mongodb" "mydb1" {
 
 ### Required
 
+- `database_name` (String)
 - `instance_type` (String) Managed instance type such as what Database Type and what version
 - `location` (String) Which data center to use
 - `name` (String) Name of the Managed Instance
