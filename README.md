@@ -1,4 +1,4 @@
-# IXCLOUD Terraform Provider ![version](https://img.shields.io/badge/version-1.4.1-blue)
+# IXCLOUD Terraform Provider ![version](https://img.shields.io/badge/version-1.4.2-blue)
 
 This provider can be used to configure resources from the [ixCloud Portal](https://portal.ixcloud.ch)
 using the provided api. It is intended for private customer of our company. Therefore the provider is of no use if you
