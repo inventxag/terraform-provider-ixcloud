@@ -47,7 +47,8 @@ resource "ixcloud_virtualmachine" "vm" {
           exclusion      = "another exclusion"
           exclusion_type = "Folder"
         }
-      ]
+      ],
+      advanced_configuration = "{\n  \"proxy\": null\n}"
     }
     qualys              = true
     software_deployment = true
