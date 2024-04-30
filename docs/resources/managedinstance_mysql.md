@@ -18,6 +18,7 @@ resource "ixcloud_managedinstance_mysql" "mydb1" {
   instance_type       = "MYSQL8019CE"
   network             = "network1234"
   sla                 = "Silver"
+  database_name       = "mydbname"
   user                = "username1234"
   pw                  = "securePassword1!"
   location            = "DCSG"
@@ -34,6 +35,7 @@ resource "ixcloud_managedinstance_mysql" "mydb1" {
 
 ### Required
 
+- `database_name` (String)
 - `instance_type` (String) Managed instance type such as what Database Type and what version
 - `location` (String) Which data center to use
 - `name` (String) Name of the Managed Instance
