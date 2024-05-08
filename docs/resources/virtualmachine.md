@@ -123,6 +123,10 @@ Required:
 
 - `exclusions` (Attributes List) (see [below for nested schema](#nestedatt--addons--edr--exclusions))
 
+Optional:
+
+- `config` (String)
+
 <a id="nestedatt--addons--edr--exclusions"></a>
 ### Nested Schema for `addons.edr.exclusions`
 
