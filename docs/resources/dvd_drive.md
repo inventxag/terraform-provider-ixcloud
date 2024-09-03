@@ -25,12 +25,12 @@ resource "ixcloud_dvd_drive" "dvd" {
 
 ### Required
 
-- `lun` (Number)
-- `virtualmachine_name` (String)
+- `lun` (Number) The logical unit number (LUN) of the dvd drive. Changing this forces a new resource to be created.
+- `virtualmachine_name` (String) The name of the virtual machine to attach the dvd drive to. Changing this forces a new resource to be created.
 
 ### Optional
 
-- `bus` (Number)
+- `bus` (Number) The bus number of the dvd drive. Changing this forces a new resource to be created.
 - `iso_image` (String)
 - `name` (String)
 

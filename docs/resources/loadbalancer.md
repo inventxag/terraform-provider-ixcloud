@@ -41,13 +41,13 @@ resource "ixcloud_loadbalancer" "lb" {
 
 ### Required
 
-- `application_group_name` (String) Specify your application (Jira, OWA, ...) / server category (SQL, MySql, ...)
-- `environment` (String)
-- `fqdn` (String)
+- `application_group_name` (String) Specify your application (Jira, OWA, ...) / server category (SQL, MySql, ...). Changing this forces a new resource to be created.
+- `environment` (String) The environment of the LoadBalancer. Changing this forces a new resource to be created.
+- `fqdn` (String) The fully qualified domain name of the LoadBalancer. Changing this forces a new resource to be created.
 - `max_throughput` (Number)
-- `name` (String)
+- `name` (String) The name of the LoadBalancer. Changing this forces a new resource to be created.
 - `owner` (String)
-- `port` (Number)
+- `port` (Number) The port of the LoadBalancer. Changing this forces a new resource to be created.
 
 ### Optional
 
@@ -55,8 +55,8 @@ resource "ixcloud_loadbalancer" "lb" {
 - `cost_center` (String)
 - `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `health_monitor` (String)
-- `internal` (Boolean)
-- `layer` (String) Can be one of the following values: Layer4
+- `internal` (Boolean) If the LoadBalancer is internal or external. Changing this forces a new resource to be created.
+- `layer` (String) Can be one of the following values: Layer4 Changing this forces a new resource to be created.
 - `load_balancing_algorithm` (String) Can be one of the following values: RoundRobin, LeastConnections, Custom
 - `organizational_unit` (String)
 - `persistence_mode` (String) Can be one of the following values: None, ClientIp

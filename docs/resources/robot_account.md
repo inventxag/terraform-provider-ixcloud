@@ -28,14 +28,14 @@ resource "ixcloud_robot_account" "deployment" {
 
 ### Required
 
-- `container_registry_name` (String)
-- `name` (String)
+- `container_registry_name` (String) The name of the container registry where the robot account will be created. Changing this forces a new resource to be created.
+- `name` (String) The name of the robot account. Changing this forces a new resource to be created.
 
 ### Optional
 
-- `expiration` (Number) Expiration time in days of the secret. If expiration is set to -1 it means it is valid indefinitely. Default values to 180.
+- `expiration` (Number) Expiration time in days of the secret. If expiration is set to -1 it means it is valid indefinitely. Default values to 180. Changing this forces a new resource to be created.
 
 ### Read-Only
 
-- `login_name` (String)
-- `secret` (String, Sensitive)
+- `login_name` (String) The login name of the robot account. Changing this forces a new resource to be created.
+- `secret` (String, Sensitive) The secret of the robot account.

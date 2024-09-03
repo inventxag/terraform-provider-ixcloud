@@ -24,7 +24,7 @@ resource "ixcloud_data_source" "test" {
 
 ### Required
 
-- `name` (String)
+- `name` (String) The name of the data source. Changing this forces a new resource to be created.
 - `owner` (String)
 
 ### Optional

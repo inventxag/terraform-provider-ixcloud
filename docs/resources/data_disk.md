@@ -27,12 +27,12 @@ resource "ixcloud_data_disk" "data1" {
 ### Required
 
 - `disk_size_gb` (Number)
-- `lun` (Number)
-- `name` (String) The name of the data disk (without the virtual machine name)
-- `virtualmachine_name` (String)
+- `lun` (Number) The logical unit number (LUN) of the data disk. Changing this forces a new resource to be created.
+- `name` (String) The name of the data disk (without the virtual machine name). Changing this forces a new resource to be created.
+- `virtualmachine_name` (String) The name of the virtual machine to attach the data disk to. Changing this forces a new resource to be created.
 
 ### Optional
 
-- `bus` (Number)
+- `bus` (Number) The bus number of the data disk. Changing this forces a new resource to be created.
 
 

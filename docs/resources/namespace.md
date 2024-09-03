@@ -40,7 +40,7 @@ resource "ixcloud_namespace" "namespace" {
 - `cpu_quota_mili` (Number)
 - `is_admin` (Boolean) Set Admin to create a kubeconfig that can read and write. Otherwise it is readonly.
 - `mem_quota_mb` (Number)
-- `name` (String)
+- `name` (String) The name of the namespace. Changing this forces a new resource to be created.
 - `owner` (String)
 - `pvc_quota` (Number)
 - `storage_quota_gb` (Number)

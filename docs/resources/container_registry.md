@@ -26,7 +26,7 @@ resource "ixcloud_container_registry" "test" {
 
 ### Required
 
-- `name` (String)
+- `name` (String) The name of the container registry. Changing this forces a new resource to be created.
 - `owner` (String)
 - `project_quota` (Number) Quota of the project in GB
 - `scanner` (String)

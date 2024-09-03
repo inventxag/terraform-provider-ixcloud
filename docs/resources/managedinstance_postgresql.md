@@ -35,17 +35,17 @@ resource "ixcloud_managedinstance_postgresql" "mydb1" {
 
 ### Required
 
-- `database_name` (String)
-- `instance_type` (String) Managed instance type such as what Database Type and what version
-- `location` (String) Which data center to use
-- `name` (String) Name of the Managed Instance
+- `database_name` (String) Name of the database. Changing this forces a new resource to be created.
+- `instance_type` (String) Managed instance type such as what Database Type and what version. Changing this forces a new resource to be created.
+- `location` (String) Which data center to use. Changing this forces a new resource to be created.
+- `name` (String) Name of the Managed Instance. Changing this forces a new resource to be created.
 - `network` (String)
 - `owner` (String)
 - `patch_day` (String) The day of patching as a number between 0 and 6 where the week starts at 0/Sunday
 - `patch_wave` (String) In which wave the patch will be applied
 - `pw` (String, Sensitive)
-- `sla` (String) The Service Level Agreement (SLA) to be enforced when provisioning this resource.
-- `user` (String)
+- `sla` (String) The Service Level Agreement (SLA) to be enforced when provisioning this resource. Changing this forces a new resource to be created.
+- `user` (String) Username for the Managed Instance. Changing this forces a new resource to be created.
 
 ### Optional
 

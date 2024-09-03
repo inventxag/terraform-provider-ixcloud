@@ -76,12 +76,12 @@ resource "ixcloud_virtualmachine" "vm" {
 
 ### Required
 
-- `location` (String) Which data center to use
-- `name` (String) Unique (ixcloud wide) Name of the VirtualMachine
+- `location` (String) Which data center to use. Changing this forces a new resource to be created.
+- `name` (String) Unique (ixcloud wide) Name of the VirtualMachine. Changing this forces a new resource to be created.
 - `network` (String)
-- `os` (String)
+- `os` (String) The operating system of the VirtualMachine. Changing this forces a new resource to be created.
 - `owner` (String)
-- `sla` (String) The Service Level Agreement (SLA) to be enforced when provisioning this resource.
+- `sla` (String) The Service Level Agreement (SLA) to be enforced when provisioning this resource. Changing this forces a new resource to be created.
 
 ### Optional
 

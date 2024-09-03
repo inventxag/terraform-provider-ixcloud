@@ -35,7 +35,7 @@ resource "ixcloud_subnet" "mysubnet" {
 
 ### Required
 
-- `name` (String)
+- `name` (String) The name of the subnet. Changing this forces a new resource to be created.
 - `owner` (String)
 - `vrf` (String)
 
