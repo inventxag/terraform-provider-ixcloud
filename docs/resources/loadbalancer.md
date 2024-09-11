@@ -59,7 +59,7 @@ resource "ixcloud_loadbalancer" "lb" {
 - `layer` (String) Can be one of the following values: Layer4 Changing this forces a new resource to be created.
 - `load_balancing_algorithm` (String) Can be one of the following values: RoundRobin, LeastConnections, Custom
 - `organizational_unit` (String)
-- `persistence_mode` (String) Can be one of the following values: None, ClientIp
+- `persistence_mode` (String) Can be one of the following values: ClientIp
 - `resource_group` (String)
 - `tags` (Set of String)
 
