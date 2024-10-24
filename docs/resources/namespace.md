@@ -37,20 +37,22 @@ resource "ixcloud_namespace" "namespace" {
 
 - `cluster_name` (String)
 - `cluster_type` (String)
-- `cpu_quota_mili` (Number)
+- `disable_network_policy` (Boolean)
+- `disable_quota` (Boolean)
 - `is_admin` (Boolean) Set Admin to create a kubeconfig that can read and write. Otherwise it is readonly.
-- `mem_quota_mb` (Number)
 - `name` (String) The name of the namespace. Changing this forces a new resource to be created.
 - `owner` (String)
-- `pvc_quota` (Number)
-- `storage_quota_gb` (Number)
 - `time_to_live` (Number) Defines how long the kubeconfig is valid. Maximum is 24'855 days.
 
 ### Optional
 
 - `cost_center` (String)
+- `cpu_quota_mili` (Number)
+- `mem_quota_mb` (Number)
 - `organizational_unit` (String)
+- `pvc_quota` (Number)
 - `resource_group` (String)
+- `storage_quota_gb` (Number)
 - `tags` (Set of String)
 
 
