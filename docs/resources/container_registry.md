@@ -36,6 +36,8 @@ resource "ixcloud_container_registry" "test" {
 - `allow_public_access` (Boolean) When a project is set to public, anyone has read permission to the repositories under this project.
 - `cost_center` (String)
 - `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
+- `cve_allowlist_expires_at` (String)
+- `cve_ids` (Set of String)
 - `organizational_unit` (String)
 - `pull_restriction_level` (String)
 - `pull_restrictions` (Boolean) Prevent vulnerable images from running. Can create a production issue.
