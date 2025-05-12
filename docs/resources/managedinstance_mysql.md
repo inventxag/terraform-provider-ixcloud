@@ -41,8 +41,6 @@ resource "ixcloud_managedinstance_mysql" "mydb1" {
 - `name` (String) Name of the Managed Instance. Changing this forces a new resource to be created.
 - `network` (String)
 - `owner` (String)
-- `patch_day` (String) The day of patching as a number between 0 and 6 where the week starts at 0/Sunday
-- `patch_wave` (String) In which wave the patch will be applied
 - `pw` (String, Sensitive)
 - `sla` (String) The Service Level Agreement (SLA) to be enforced when provisioning this resource. Changing this forces a new resource to be created.
 - `user` (String) Username for the Managed Instance. Changing this forces a new resource to be created.
@@ -55,6 +53,8 @@ resource "ixcloud_managedinstance_mysql" "mydb1" {
 - `hardware` (String)
 - `no_backup_justification` (String) Justification for not having backups
 - `organizational_unit` (String)
+- `patch_day` (String) The day of patching as a number between 0 and 6 where the week starts at 0/Sunday
+- `patch_wave` (String) In which wave the patch will be applied
 - `release_level` (String)
 - `resource_group` (String)
 - `storage_class` (String) The storage class to be used for this resource. This limits the IOPS of the storage.

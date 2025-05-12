@@ -115,6 +115,7 @@ Optional:
 - `security_classification` (Attributes) (see [below for nested schema](#nestedatt--addons--security_classification))
 - `software_deployment` (Boolean)
 - `software_inventory` (Boolean)
+- `system_update` (Attributes) (see [below for nested schema](#nestedatt--addons--system_update))
 
 <a id="nestedatt--addons--edr"></a>
 ### Nested Schema for `addons.edr`
@@ -140,15 +141,12 @@ Required:
 <a id="nestedatt--addons--managed_os"></a>
 ### Nested Schema for `addons.managed_os`
 
-Required:
-
-- `patch_day` (String) The day of patching as a number between 0 and 6 where the week starts at 0/Sunday
-- `patch_wave` (String) In which wave the patch will be applied
-
 Optional:
 
 - `config` (String)
 - `no_automatic_patch_justification` (String) Justification for not having automatic patching
+- `patch_day` (String) The day of patching as a number between 0 and 6 where the week starts at 0/Sunday
+- `patch_wave` (String) In which wave the patch will be applied
 
 
 <a id="nestedatt--addons--metrics"></a>
@@ -170,6 +168,18 @@ Optional:
 
 - `client_identifying` (Boolean)
 - `protection_class` (String)
+
+
+<a id="nestedatt--addons--system_update"></a>
+### Nested Schema for `addons.system_update`
+
+Optional:
+
+- `disable_automatic_patch` (Boolean)
+- `maintenance_window_start_hour` (Number) The start hour of the maintenance window in 24-hour format (0-23).
+- `no_automatic_patch_justification` (String) Justification for not having automatic patching
+- `patch_day` (String) The day of patching as a text value
+- `patch_week` (String) In which week the patch will be applied
 
 
 
