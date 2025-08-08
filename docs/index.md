@@ -79,7 +79,6 @@ resource "ixcloud_virtualmachine" "vm" {
   resource_group = ixcloud_resourcegroup.rg.name
   tags           = ["Test"]
   addons         = {
-    cis_hardening = true
     managed_os    = {
       patch_day  = 1
       patch_wave = "Wave 1"

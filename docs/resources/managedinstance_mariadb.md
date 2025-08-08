@@ -33,10 +33,11 @@ This resource represents a managed MariaDb instance.
 - `cost_center` (String)
 - `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `hardware` (String)
+- `maintenance_window_start_hour` (Number) The start hour of the maintenance window in 24-hour format (0-23).
 - `no_backup_justification` (String) Justification for not having backups
 - `organizational_unit` (String)
-- `patch_day` (String) The day of patching as a number between 0 and 6 where the week starts at 0/Sunday
-- `patch_wave` (String) In which wave the patch will be applied
+- `patch_day` (String) The day of patching as a text value
+- `patch_week` (String) In which week the patch will be applied
 - `release_level` (String)
 - `resource_group` (String)
 - `storage_class` (String) The storage class to be used for this resource. This limits the IOPS of the storage.

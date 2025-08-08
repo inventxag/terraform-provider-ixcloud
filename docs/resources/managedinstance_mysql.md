@@ -22,8 +22,9 @@ resource "ixcloud_managedinstance_mysql" "mydb1" {
   user                = "username1234"
   pw                  = "securePassword1!"
   location            = "DCSG"
-  patch_wave          = "Wave 1"
-  patch_day           = 1
+  patch_week          = "Third"
+  patch_day           = "Thursday"
+  maintenance_window_start_hour = 3
   owner               = "hans.mueller@inventx.ch"
   cost_center         = "ABC_IX_Management"
   organizational_unit = "ABC IX Management"
@@ -47,18 +48,37 @@ resource "ixcloud_managedinstance_mysql" "mydb1" {
 
 ### Optional
 
+- `addons` (Attributes) (see [below for nested schema](#nestedatt--addons))
 - `backup_days` (Number)
 - `cost_center` (String)
 - `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `hardware` (String)
+- `maintenance_window_start_hour` (Number) The start hour of the maintenance window in 24-hour format (0-23).
 - `no_backup_justification` (String) Justification for not having backups
 - `organizational_unit` (String)
-- `patch_day` (String) The day of patching as a number between 0 and 6 where the week starts at 0/Sunday
-- `patch_wave` (String) In which wave the patch will be applied
+- `patch_day` (String) The day of patching as a text value
+- `patch_week` (String) In which week the patch will be applied
 - `release_level` (String)
 - `resource_group` (String)
 - `storage_class` (String) The storage class to be used for this resource. This limits the IOPS of the storage.
 - `tags` (Set of String)
+
+<a id="nestedatt--addons"></a>
+### Nested Schema for `addons`
+
+Optional:
+
+- `security_classification` (Attributes) (see [below for nested schema](#nestedatt--addons--security_classification))
+
+<a id="nestedatt--addons--security_classification"></a>
+### Nested Schema for `addons.security_classification`
+
+Optional:
+
+- `client_identifying` (Boolean)
+- `protection_class` (String)
+
+
 
 <a id="nestedatt--custom_properties"></a>
 ### Nested Schema for `custom_properties`

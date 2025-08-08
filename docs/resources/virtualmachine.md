@@ -36,7 +36,6 @@ resource "ixcloud_virtualmachine" "vm" {
   tags                    = ["Test"]
   no_backup_justification = "Only cowards need a backup ;-)"
   addons                  = {
-    cis_hardening       = true
     edr = {
       exclusions = [
         {
@@ -106,7 +105,6 @@ resource "ixcloud_virtualmachine" "vm" {
 
 Optional:
 
-- `cis_hardening` (Boolean)
 - `edr` (Attributes) (see [below for nested schema](#nestedatt--addons--edr))
 - `managed_os` (Attributes) (see [below for nested schema](#nestedatt--addons--managed_os))
 - `metrics` (Attributes) (see [below for nested schema](#nestedatt--addons--metrics))
