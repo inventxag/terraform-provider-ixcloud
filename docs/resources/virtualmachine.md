@@ -47,7 +47,7 @@ resource "ixcloud_virtualmachine" "vm" {
           exclusion_type = "Folder"
         }
       ],
-      advanced_configuration = "{\n  \"proxy\": null\n}"
+      config = "{\n  \"proxy\": null\n}"
     }
     qualys              = true
     software_deployment = true
@@ -132,7 +132,7 @@ Optional:
 Required:
 
 - `exclusion` (String) The value of the exclusion.
-- `exclusion_type` (String) The type of the exclusion.
+- `exclusion_type` (String) The type of the exclusion. Possible values are: Extension, File, Folder, Process
 
 
 
