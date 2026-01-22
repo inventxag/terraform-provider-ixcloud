@@ -15,8 +15,9 @@ Resource for creating and attaching virtual dvd drives to virtual machines
 ```terraform
 resource "ixcloud_dvd_drive" "dvd" {
   virtualmachine_name = "ABCTL1234"
+  bus                 = 0
   lun                 = 1
-  iso_image           = "MyIsoImage.iso"
+  iso_image_id        = "00000000-0000-0000-0000-000000000000"
 }
 ```
 
@@ -31,7 +32,7 @@ resource "ixcloud_dvd_drive" "dvd" {
 ### Optional
 
 - `bus` (Number) The bus number of the dvd drive. Changing this forces a new resource to be created.
-- `iso_image` (String)
+- `iso_image_id` (String) The UUID of the ISO image to mount in the dvd drive. Can be obtained from the ixcloud API.
 - `name` (String)
 
 
