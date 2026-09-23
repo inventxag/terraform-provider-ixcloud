@@ -34,6 +34,7 @@ resource "ixcloud_anycloud_k8s" "example" {
       worker_nodes       = 3
       hardware_profile   = "p4-8"
       operating_system   = "flatcar"
+      os_disk_size_gb    = 80
       labels = {
         role = "worker"
       }
@@ -70,6 +71,7 @@ resource "ixcloud_anycloud_k8s" "example" {
 ### Optional
 
 - `cost_center` (String)
+- `custom_properties` (Attributes List) (see [below for nested schema](#nestedatt--custom_properties))
 - `organizational_unit` (String)
 - `owner` (String)
 - `resource_group` (String)
@@ -90,6 +92,7 @@ Optional:
 
 - `annotations` (Map of String)
 - `labels` (Map of String)
+- `os_disk_size_gb` (Number)
 - `taints` (Attributes List) (see [below for nested schema](#nestedatt--worker_pools--taints))
 
 <a id="nestedatt--worker_pools--taints"></a>
@@ -102,6 +105,16 @@ Required:
 
 Optional:
 
+- `value` (String)
+
+
+
+<a id="nestedatt--custom_properties"></a>
+### Nested Schema for `custom_properties`
+
+Optional:
+
+- `key` (String)
 - `value` (String)
 
 
